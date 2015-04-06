@@ -14,9 +14,10 @@ class CommentsController < ApplicationController
 
   def create
   	@comment = Comment.new(comment_params.merge(user_id:current_user.id))
+  	@comment.event_id = params[:event_id]
 
   	if @comment.save
-  		redirect_to comments_path
+  		redirect_to event_path(params[:event_id])
   	else
   		render :new
   	end
