@@ -1,5 +1,11 @@
-<%= Please see below for all events %>
+<h1>Please see below for all events:</h1>
 
+
+<% @events.each do |event| %>
+<%= event.name %><br>
+<%= event.description %><br>
+<%= event.date %><br>
+<%= link_to "view details", event_path(event) %><br><br>
 <% end %>
 
 

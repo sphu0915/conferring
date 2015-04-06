@@ -1,0 +1,9 @@
+<% @comments.each do |comment| %>
+<%= comment.body %>
+
+<%= form_for @comment %>
+<%= form.input :body %>
+<%= form.submit %>
+
+
+<% end %>
