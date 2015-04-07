@@ -1,5 +1,9 @@
 <h1>Please see below for all events:</h1>
 
+<%= form_tag '', method: 'GET' do %>
+	<%= text_field_tag(:id, params[:id], { placeholder: 'Search Query'}) %>
+	<%= submit_tag 'Search' %>
+<% end %>
 
 <% @events.each do |event| %>
 <%= event.name %><br>

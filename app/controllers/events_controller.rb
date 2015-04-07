@@ -1,7 +1,13 @@
 class EventsController < ApplicationController
   def index
-  	@events = Event.all
-  end
+
+  		if params[:id].present?
+		@events = Events.where(name: params[:id])
+		else
+		@events = Event.all
+		end
+	end
+ 
 
   def show
   	@event = Event.find(params[:id])
