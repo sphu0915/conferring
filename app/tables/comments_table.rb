@@ -6,7 +6,7 @@ class CommentsTable < TableCloth::Base
 
   actions do
     action do |comment|
-      link_to 'Edit Comment', edit comment_path(comment)
+      link_to 'Edit Comment', edit_comment_path(comment)
     end
   end
 
