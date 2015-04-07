@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   def index
 
   		if params[:id].present?
-		@events = Events.where(name: params[:id])
+		@events = Event.where(name: params[:id])
 		else
 		@events = Event.all
 		end
